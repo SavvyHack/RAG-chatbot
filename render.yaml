@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: rag-chatbot
+    env: python
+    plan: free
+    buildCommand: >-
+      pip install torch --index-url https://download.pytorch.org/whl/cpu &&
+      pip install -r requirements.txt &&
+      python manage.py collectstatic --noinput
+    startCommand: "gunicorn chatbot.wsgi:application"
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DJANGO_DEBUG
+        value: "False"
+      - key: DJANGO_ALLOWED_HOSTS
+        value: ".onrender.com"
+      - key: GEMINI_API_KEY
+        sync: false

@@ -1,0 +1,17 @@
+# Web framework
+Django>=5.1,<5.2
+gunicorn>=22.0
+whitenoise>=6.7
+
+# Config / HTTP
+python-dotenv>=1.0
+requests>=2.31
+
+# Local DialoGPT model
+transformers>=4.44
+
+# torch is large (500MB-2GB depending on build). The plain PyPI wheel
+# below includes CUDA support you almost certainly don't need on a web
+# host. For deployment, prefer the much smaller CPU-only build instead:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.3

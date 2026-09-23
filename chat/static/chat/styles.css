@@ -1,0 +1,93 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background-color: #f4f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#root {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+    color: #222;
+    font-size: 24px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+textarea {
+    width: 100%;
+    height: 160px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.actions {
+    margin-top: 16px;
+}
+
+button {
+    padding: 12px 22px;
+    font-size: 15px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 6px;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#submit {
+    background-color: #c0289b;
+}
+
+#gemini {
+    background-color: #28a745;
+}
+
+h3 {
+    margin-top: 28px;
+    margin-bottom: 8px;
+    color: #333;
+    text-align: left;
+}
+
+p#response {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    min-height: 50px;
+    padding: 12px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    text-align: left;
+    white-space: pre-wrap;
+}

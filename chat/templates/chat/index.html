@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Chatbot</title>
+    <link rel="stylesheet" href="{% static 'chat/styles.css' %}">
+</head>
+<body>
+    <main id="root">
+        <h1>RAG Chatbot</h1>
+        <label for="query">Enter your message</label>
+        <textarea id="query" name="query" placeholder="Ask me something..."></textarea>
+
+        <div class="actions">
+            <button type="button" id="submit" onclick="submit()">Ask DialoGPT</button>
+            <button type="button" id="gemini" onclick="askgemini()">Ask Gemini</button>
+        </div>
+
+        <h3>Response</h3>
+        <p id="response"></p>
+    </main>
+    <script src="{% static 'chat/main.js' %}"></script>
+</body>
+</html>

@@ -1,9 +1,9 @@
 from django.urls import path
-
 from . import views
 
 urlpatterns = [
     path("", views.chat_page, name="chat_page"),
-    path("api/dialogpt/", views.dialogpt_query, name="dialogpt_query"),
-    path("api/gemini/", views.gemini_query, name="gemini_query"),
+    path("api/upload_context/", views.upload_context, name="upload_context"),
+    path("api/query_rag/", views.query_rag, name="query_rag"),
+    path("api/clear_context/", views.clear_context, name="clear_context"),
 ]

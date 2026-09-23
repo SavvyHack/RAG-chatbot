@@ -5,13 +5,18 @@ whitenoise>=6.7
 
 # Config / HTTP
 python-dotenv>=1.0
-requests>=2.31
 
-# Local DialoGPT model
-transformers>=4.44
-
-# torch is large (500MB-2GB depending on build). The plain PyPI wheel
-# below includes CUDA support you almost certainly don't need on a web
-# host. For deployment, prefer the much smaller CPU-only build instead:
-#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# Local RAG & LLM dependencies
+transformers>=4.45
 torch>=2.3
+accelerate>=0.30
+sentence-transformers>=3.0
+faiss-cpu>=1.8
+numpy>=1.26
+
+# Document & Image extraction
+pymupdf>=1.24
+python-docx>=1.1
+easyocr>=1.7
+Pillow>=10.0
+beautifulsoup4>=4.12

@@ -43,25 +43,21 @@ A Django web app with a simple chat UI that can answer a query two ways:
 **Prerequisites:** Python 3.12+, pip. A [Gemini API key](https://aistudio.google.com/apikey) if you want the Gemini button to work.
 
 ```bash
-# 1. Clone and enter the project
+# Clone and enter the project
 git clone https://github.com/SavvyHack/RAG-chatbot.git
 cd RAG-chatbot
 
-# 2. Create and activate a virtual environment
+# Create and activate a virtual environment
 python -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
 
-# 3. Install dependencies
+# Install dependencies
 # (CPU-only PyTorch keeps this fast/small; skip the first line if you
-#  already have a GPU build of torch installed)
+# already have a GPU build of torch installed)
 pip install torch --index-url https://download.pytorch.org/whl/cpu
 pip install -r requirements.txt
 
-# 4. Configure environment variables
-cp .env.example .env
-# then edit .env and set GEMINI_API_KEY (and DJANGO_SECRET_KEY)
-
-# 5. Apply migrations and run
+# Apply migrations and run
 python manage.py migrate
 python manage.py runserver
 ```

@@ -33,7 +33,6 @@ A Django web app with a simple chat UI that can answer a query two ways:
 │   └── views.py
 ├── manage.py
 ├── requirements.txt
-├── .env.example        # template for local/prod environment variables
 ├── Dockerfile
 ├── Procfile             # for Heroku-style platforms
 └── render.yaml          # one-click Render blueprint
